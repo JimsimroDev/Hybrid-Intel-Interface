@@ -1,6 +1,6 @@
 // app.js — AI Orchestrator Frontend
 
-const API_BASE = 'https://orchestrator.jimsimrodev.uk/api/v1';
+const API_BASE ='https:orchestrator-api.jimsimrodev.uk/api/v1';
 
 // --- API Client ---
 
