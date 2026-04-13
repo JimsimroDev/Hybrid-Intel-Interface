@@ -1,0 +1,115 @@
+ /* styles.css — AI Orchestrator Frontend */
+
+
+/* Fade-in animation for message bubbles */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+.fade-in {
+
+  animation: fadeIn 200ms ease-out both;
+
+}
+
+
+/* Suggestion card hover scale */
+
+.suggestion-card {
+
+  transition: transform 200ms ease;
+
+}
+
+
+.suggestion-card:hover {
+
+  transform: scale(1.02);
+
+}
+
+
+/* Code blocks inside AI message bubbles */
+
+.message--ai code {
+
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+  font-size: 0.875rem;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border-radius: 4px;
+
+  padding: 2px 4px;
+
+}
+
+
+.message--ai pre {
+
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+  font-size: 0.875rem;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border-radius: 4px;
+
+  padding: 12px;
+
+  overflow-x: auto;
+
+}
+
+
+.message--ai pre code {
+
+  background: transparent;
+
+  padding: 0;
+
+}
+
+
+/* Smooth transitions for interactive elements */
+
+#send-btn {
+
+  transition: all 150ms ease;
+
+}
+
+
+#user-input {
+
+  transition: all 150ms ease;
+
+}
+
+
+.message--user,
+
+.message--ai {
+
+  transition: all 200ms ease;
+
+}

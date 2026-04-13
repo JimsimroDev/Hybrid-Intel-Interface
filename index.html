@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hybrid AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body
+    class="bg-[#0a0a0a] text-gray-100 h-screen flex flex-col overflow-hidden"
+  >
+    <!-- Fixed header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-10 bg-gray-900 border-b border-gray-800 px-4 py-3 flex items-center justify-between"
+    >
+      <h1 class="text-lg font-semibold text-white tracking-tight">
+        Hybrid AI Assistant
+      </h1>
+      <div class="flex items-center gap-2 text-sm text-gray-400">
+        <span id="api-status" class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-gray-600"></span>
+          <span class="text-xs">Conectando...</span>
+        </span>
+      </div>
+    </header>
+
+    <!-- Main chat area (offset for fixed header + footer) -->
+    <main id="chat-container" class="flex-1 overflow-y-auto pt-16 pb-36 px-4">
+      <div class="max-w-4xl mx-auto space-y-4 py-4">
+        <!-- Messages rendered here by JS -->
+      </div>
+    </main>
+
+    <!-- Suggestion cards -->
+    <section id="suggestions" class="fixed bottom-20 left-0 right-0 px-4 pb-2">
+      <div class="max-w-4xl mx-auto grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <!-- 4 suggestion cards rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Footer: loading indicator + input area -->
+    <footer
+      class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 px-4 py-3"
+    >
+      <div class="max-w-4xl mx-auto space-y-2">
+        <!-- Loading indicator -->
+        <div
+          id="loading-indicator"
+          class="hidden text-sm text-gray-400 animate-pulse px-1"
+        >
+          IA pensando...
+        </div>
+
+        <!-- Input area -->
+        <div id="input-area" class="flex gap-2">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Escribe tu pregunta..."
+            class="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-150"
+          />
+          <button
+            id="send-btn"
+            class="bg-blue-600 hover:bg-blue-500 active:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-150"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
