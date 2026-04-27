@@ -210,11 +210,11 @@ async function checkApiHealth() {
       textSpan.textContent = 'En línea';
     } else {
       dotSpan.className = 'w-2 h-2 rounded-full bg-red-500';
-      textSpan.textContent = 'Sin conexión';
+      textSpan.textContent = 'Estamos despertando el motor de IA, esto tomará unos segundos (Cortesía de la capa gratuita de Render) 🚀';
     }
   } catch (_err) {
     dotSpan.className = 'w-2 h-2 rounded-full bg-red-500';
-    textSpan.textContent = 'Sin conexión';
+    textSpan.textContent = 'Estamos despertando el motor de IA, esto tomará unos segundos (Cortesía de la capa gratuita de Render) 🚀';
   }
 }
 
